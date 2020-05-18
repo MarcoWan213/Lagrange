@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author usuario
- */
 public class frmVentana extends javax.swing.JFrame {
 
     tableModel modelo = new tableModel();
+
     /**
      * Creates new form frmVentana
      */
@@ -119,17 +110,18 @@ public class frmVentana extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         //Limpiar textfields
-        try{
-        Punto punto = new Punto();
-        punto.setI(0);
-        punto.setX(Double.parseDouble(this.txtX.getText().trim()));
-        punto.setY(Double.parseDouble(this.txtY.getText().trim()));
-        System.out.println(punto.toString());
-        this.modelo.addPunto(punto);
-        }
-        catch(NumberFormatException e){
+        try {
+            Punto punto = new Punto();
+            punto.setI(0);
+            punto.setX(Double.parseDouble(this.txtX.getText().trim()));
+            punto.setY(Double.parseDouble(this.txtY.getText().trim()));
+            System.out.println(punto.toString());
+            this.modelo.addPunto(punto);
+        } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 2);
         }
+        txtX.setText("");
+        txtY.setText("");
         
     }//GEN-LAST:event_btnAddActionPerformed
 

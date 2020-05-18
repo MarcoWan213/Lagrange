@@ -2,19 +2,14 @@
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author usuario
- */
-public class tableModel extends AbstractTableModel{
+public class tableModel extends AbstractTableModel {
 
     public static String[] columnas = {"i", "Temperatura", "Dencidad"};
     public ArrayList<Punto> datos = new ArrayList<Punto>();
-    
+
     public tableModel() {
     }
-    
-    
+
     @Override
     public int getRowCount() {
         return this.datos.size();
@@ -28,10 +23,13 @@ public class tableModel extends AbstractTableModel{
     @Override
     public Object getValueAt(int i, int i1) {
         Punto p = this.datos.get(i);
-        switch(i1){
-            case 0: return p.getI();
-            case 1: return p.getX();
-            case 2: return p.getY();
+        switch (i1) {
+            case 0:
+                return p.getI();
+            case 1:
+                return p.getX();
+            case 2:
+                return p.getY();
         }
         return null;
     }
@@ -46,12 +44,11 @@ public class tableModel extends AbstractTableModel{
         return this.columnas[i];
     }
 
-    public void addPunto(Punto p){
+    public void addPunto(Punto p) {
         p.setI(this.datos.size());
         this.datos.add(p);
-        this.fireTableRowsInserted(this.datos.size()-1, this.datos.size()-1);
-        
+        this.fireTableRowsInserted(this.datos.size() - 1, this.datos.size() - 1);
+
     }
-    
-    
+
 }

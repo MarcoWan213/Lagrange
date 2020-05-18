@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-
-/**
- *
- * @author usuario
- */
 public class Punto {
+
     private int i;//posicion 
     private double x;//valor independiente
     private double y;// valor dependiente 
@@ -42,6 +33,5 @@ public class Punto {
     public String toString() {
         return "Punto{" + "i=" + i + ", x=" + x + ", y=" + y + '}';
     }
-    
-    
+
 }
