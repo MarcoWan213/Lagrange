@@ -16,10 +16,10 @@ public class classLogica {
             lag = "\n[";
             for (int j = 0; j < this.datos.size(); j++) {
                 if (j != i) {
-                    lag += ("");
+                    lag += ("{");
                     lag += "(x- " + this.datos.get(j).getX() + ") / ";
                     lag += "(" + String.valueOf(this.datos.get(i).getX()) + " - " + String.valueOf(this.datos.get(j).getX() + ")");
-                    lag += ("");
+                    lag += ("}");
                 }
             }
             polinomio += lag + "]*" + String.valueOf(this.datos.get(i).getY());            
